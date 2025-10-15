@@ -17,7 +17,7 @@ class ChatScreen extends StatelessWidget {
           padding: EdgeInsets.all(4.0),
           child: CircleAvatar(
             backgroundImage: NetworkImage(
-              'https://imgs.search.brave.com/jbPnB3G4mvSeerbe-Z_T2irBoGei9_81twAmzT5R0wc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/Z2V0LW1lLXBpY3R1/cmVzLW9mLXNwaWRl/ci1tYW4tdjAteTc2/YzR0dm16cGxkMS5q/cGc_d2lkdGg9NjQw/JmNyb3A9c21hcnQm/YXV0bz13ZWJwJnM9/YTIzMDJiNGE0YjE0/NmQ0MTE1OTY4Yjc3/MjAyNTg3NmM4Yzgx/NjRlMQ',
+              'https://imgs.search.brave.com/HAFTgCsKoU6aMGlDoLqLTD-7Aay5KTEQA3Q_dQfid48/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9hbmEt/ZGUtYXJtYXMtYXR0/ZW5kcy10aGUtc3Bl/Y2lhbC1zY3JlZW5p/bmctb2YtYmFsbGVy/aW5hLWF0LW5ld3Mt/cGhvdG8tMTc1Mzcw/NTQzMi5wanBlZz9j/cm9wPTEuMDB4dzow/LjY5NHhoOzAsMCZy/ZXNpemU9MzYwOio',
             ),
           ),
         ),
@@ -46,7 +46,7 @@ class _ChatView extends StatelessWidget {
                   final message = chatProvider.messages[index];
                   return (message.fromWho == FromWho.hers)
                     ? HerMessageBubble()
-                    : MyMessageBubble();
+                    : MyMessageBubble(message: message);
                 },
               ),
             ),
